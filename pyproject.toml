@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tweetviewer-api-wrapper"
+version = "1.0.0"
+description = "Unofficial Python API client and local REST wrapper for Tweet Viewer"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "UNLICENSED" }
+dependencies = []
+
+[project.scripts]
+tweetviewer-py = "tweetviewer.cli:main"
+tweetviewer-server-py = "tweetviewer.server:main"
+
+[tool.setuptools]
+packages = ["tweetviewer"]
+
