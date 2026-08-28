@@ -1,21 +1,5 @@
-# Tweet Viewer API Wrapper — Python
+# TweetViewer API Wrapper — Python
 
-Node.js版を残したまま移植した、Python 3.10以上向けの非公式Tweet Viewer APIクライアントです。外部パッケージは使わず、Python標準ライブラリだけで動作します。
-
-タイムラインはリアルタイム専用です。`get_timeline()`、`iterate_timeline()`、`get_latest_tweet()`はTweet Viewerのページと同じライブ取得先（FxTwitter）を利用し、ローカルの5分キャッシュ処理はありません。ただし、取得先サービス側のキャッシュや反映遅延は制御できません。
-
-> Tweet Viewer、FxTwitter、X Corp.とは無関係の非公式クライアントです。公開コンテンツだけを対象にし、各サービスの利用規約、著作権、アクセス負荷を考慮して利用してください。
-
-## インストール
-
-```bash
-cd '/Users/kotohasaki/Documents/プログラミング2026/8/Tweet-Viewer-API-Wrapper-Python'
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install -e .
-```
-
-インストールしなくても、プロジェクトディレクトリ内で`python3 -m tweetviewer`を実行できます。
 
 ## Pythonから使う
 
@@ -85,3 +69,5 @@ python3 -m unittest discover -s tests -v
 python3 -m compileall -q tweetviewer tests
 ```
 
+### 注意
+> Tweet Viewer、FxTwitter、X Corp.とは無関係の非公式クライアントです。公開コンテンツだけを対象にし、各サービスの利用規約、著作権、アクセス負荷を考慮して利用してください。
