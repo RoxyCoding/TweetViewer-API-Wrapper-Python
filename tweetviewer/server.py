@@ -6,11 +6,17 @@ import argparse
 import json
 import os
 import re
+import sys
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from pathlib import Path
 from typing import Any, Optional
 from urllib.parse import parse_qs, unquote, urlparse
 
-from .client import TweetViewerClient, TweetViewerError
+if __package__:
+    from .client import TweetViewerClient, TweetViewerError
+else:
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+    from tweetviewer.client import TweetViewerClient, TweetViewerError
 
 MAX_BODY_BYTES = 16 * 1024
 
